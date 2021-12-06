@@ -14,8 +14,7 @@ public class Day6 extends AOCHandler{
 		for(String s : split){
 			lanternFish.add(Integer.parseInt(s));
 		}
-		System.out.println(lanternFish.size()
-		);
+
 		for (int i = 0; i < 80; i++) {
 			for (int j = 0; j < lanternFish.size(); j++) {
 				if(lanternFish.get(j) == 0){
