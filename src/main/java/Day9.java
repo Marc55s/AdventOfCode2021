@@ -8,7 +8,6 @@ public class Day9 extends AOCHandler {
     }
 
     void solve(List<String> input) {
-
         int[][] map = new int[input.size()][input.get(0).length()];
         List<Point> lowPointCoords = new ArrayList<>();
         for (int i = 0; i < input.size(); i++) {
@@ -16,7 +15,6 @@ public class Day9 extends AOCHandler {
                 map[i][j] = Integer.parseInt(String.valueOf(input.get(i).charAt(j)));
             }
         }
-
 
         int riskLevel = 0;
         for (int i = 0; i < input.size(); i++) {
@@ -35,12 +33,12 @@ public class Day9 extends AOCHandler {
         BFS b = new BFS();
         int length = map.length;
         int depth = map[0].length;
+
         for (Point lowPointCoord : lowPointCoords) {
             int x = lowPointCoord.x;
             int y = lowPointCoord.y;
             b.bfs(length, depth, map, x, y);
         }
-
 
         Collections.sort(b.basins);
         int threeLargestBasins = 1;
