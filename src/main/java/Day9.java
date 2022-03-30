@@ -69,12 +69,12 @@ public class Day9 extends AOCHandler {
             Point pq = new Point(x, y);
             obj.add(pq);
 
-            visited[x][y] =1;
+            visited[x][y] = 1;
             int basinsPerLowpoint = 0;
             while (!obj.isEmpty()) {
-                Point coord = obj.peek();
-                int x1 = coord.x;
-                int y1 = coord.y;
+                Point coordinates = obj.peek();
+                int x1 = coordinates.x;
+                int y1 = coordinates.y;
                 int boundary = 9;
                 data[x1][y1] = 0;
                 basinsPerLowpoint++;
